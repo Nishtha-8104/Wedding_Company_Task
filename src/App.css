@@ -1,0 +1,352 @@
+/* =============================================
+   OUTER BACKGROUND (FULL PAGE)
+============================================= */
+.background {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(
+    circle at 20% 20%,
+    #b9dcff 0%,
+    #a4d3ff 40%,
+    #7ab6df 80%
+  );
+
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* =============================================
+   MIDDLE LAYER (BIG GLOWY CONTAINER)
+============================================= */
+.middle-layer {
+  width: 73vw;
+  height: 90vh;
+
+  background: linear-gradient(
+    135deg,
+    rgba(202, 231, 255, 0.65),
+    rgba(181, 218, 255, 0.55)
+  );
+
+  border-radius: 42px;
+
+  box-shadow:
+    inset 0 0 40px rgba(255, 255, 255, 0.25),
+    0 0 60px rgba(120, 180, 220, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================================
+   QUIZ CARD (INNER WHITE GLASS)
+============================================= */
+.quiz-card {
+  width: 950px;
+
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 32px;
+  padding: 55px 65px 70px;
+  position: relative;
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0px 15px 35px rgba(0, 59, 110, 0.15),
+    inset 0 0 45px rgba(255, 255, 255, 0.72);
+}
+
+/* =============================================
+   PAW POPUP
+============================================= */
+/*
+.paw-box {
+  position: absolute;
+  left: 150px;  
+  bottom: 45px;
+
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 20px;
+  width: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b4e66;
+  text-align: center;
+
+  box-shadow: 0px 6px 18px rgba(0, 30, 60, 0.18);
+  z-index: 20;
+}
+
+.paw-box::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 45px;
+
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.06));
+}
+
+.paw-img {
+  width: 105px;
+  position: absolute;
+  left: -5px;
+  bottom: -70px;
+
+  pointer-events: none;
+  user-select: none;
+
+  animation: pawPop 0.4s ease-out;
+}
+
+@keyframes pawPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+*/
+
+
+/* PERFECT LEFT-BOTTOM PAW PLACEMENT */
+.paw-box {
+  position: absolute;
+  left: 35px;
+  bottom: 125px;
+
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b4e66;
+
+  border: 2px solid #d7ecff;
+  box-shadow: 0px 6px 18px rgba(0, 50, 100, 0.18);
+  z-index: 10;
+}
+
+/* bubble tail */
+.paw-box::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 22px;
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* paw image */
+/* paw image with fade-in */
+.paw-img {
+  position: absolute;
+  left: 25px;
+  bottom: 35px;
+  width: 100px;
+  pointer-events: none;
+  opacity: 0;
+
+  animation: fadePaw 1s ease-out forwards;
+}
+
+/* fade-in animation */
+@keyframes fadePaw {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =============================================
+   HEADERS
+============================================= */
+.title {
+  font-size: 50px;
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  text-align: center;
+  color: #1c4d6e;
+  margin: 0;
+}
+
+.title span {
+  color: #2b7bb8;
+}
+
+.subtitle {
+  text-align: center;
+  color: #63798a;
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+/* =============================================
+   QUESTION BOX
+============================================= */
+.question-box {
+  width: 80%;
+  margin: auto;
+  padding: 16px 26px;
+  background: #e5f3ff;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #274257;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  box-shadow: inset 0 0 12px rgba(200, 230, 255, 0.4);
+}
+
+.q-number {
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+/* =============================================
+   ANSWERS
+============================================= */
+.answers-list {
+  width: 80%;
+  margin: auto;
+  padding: 16px 26px;
+}
+
+.answer {
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  padding: 16px 25px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #2f4658;
+  border: 1px solid #e3eef7;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+  box-shadow: 0px 2px 8px rgba(0, 40, 70, 0.06);
+}
+
+.answer:hover {
+  background: #f4faff;
+  border-color: #cfe5ff;
+}
+
+.answer.selected {
+  background: #dbeaff;
+  border-color: #97c5f5;
+  box-shadow: 0 0 0 3px rgba(150, 200, 255, 0.45);
+}
+
+/* =============================================
+   NAVIGATION BUTTONS
+============================================= */
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  gap: 12px;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  background: #eaf4ff;
+  border: 1px solid #c9e4ff;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background 0.25s, transform 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: #d7eaff;
+  transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* =============================================
+   SCORE SCREEN
+============================================= */
+.score-box {
+  font-size: 82px;
+  font-weight: 700;
+  color: #1c4d6e;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.btn-restart {
+  width: 100%;
+  padding: 16px;
+  font-size: 19px;
+  font-weight: 600;
+
+  background: #4ea8de;
+  color: white;
+
+  border: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+  transition: background 0.3s, transform 0.25s;
+}
+
+.btn-restart:hover {
+  background: #3b8cca;
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   PROGRESS BAR
+============================================= */
+.progress-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 35px;
+}
+
+.progress-segment {
+  height: 3px;
+  width: calc(100% / 4.5);
+  background: #dcdcdc;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.progress-segment.active {
+  background: #0f3b4e;
+}

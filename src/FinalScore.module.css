@@ -1,0 +1,99 @@
+/* FULL SCREEN BACKGROUND */
+.finalBg {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* exact pastel background to match screenshot */
+  background: linear-gradient(180deg, #ecf9fa 0%, #e6f6f7 100%);
+}
+
+/* centered wrapper */
+.finalWrapper {
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+/* Keep Learning small pill */
+.keepLearning {
+  padding: 10px 26px;
+  background: white;
+  border-radius: 12px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c4d6e;
+
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.06);
+  margin-bottom: 36px;
+
+  cursor: pointer;
+}
+
+/* Title */
+.finalTitle {
+  font-size: 44px;
+  font-weight: 700;
+  font-style: italic;
+  color: #1c4d6e;
+  margin-bottom: 18px;
+}
+
+/* Score Row */
+.scoreRow {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.scoreNumber {
+  font-size: 160px;
+  font-weight: 700;
+  color: #1c4d6e;
+  line-height: 0.85;
+  font-family: "Georgia", serif;
+}
+
+.percent {
+  font-size: 56px;
+  font-weight: 700;
+  color: #1c4d6e;
+  margin-top: 18px;
+  font-family: "Georgia", serif;
+}
+
+/* Start Again button */
+.startAgain {
+  padding: 14px 64px;
+  background: linear-gradient(to bottom, #e6f9ff, #cfeef9);
+  border: none;
+  border-radius: 14px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f3b4e;
+
+  cursor: pointer;
+  box-shadow: 0px 6px 22px rgba(15, 59, 78, 0.08);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.startAgain:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 28px rgba(15, 59, 78, 0.12);
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .scoreNumber { font-size: 92px; }
+  .percent { font-size: 36px; margin-top: 8px; }
+  .finalTitle { font-size: 32px; }
+  .startAgain { padding: 12px 36px; font-size: 16px; }
+}
