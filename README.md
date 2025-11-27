@@ -80,7 +80,6 @@ Follow the steps below to run the project locally:
 ##  Folder Structure
 
 ```
-```
 src/
 ├── App.js                  # Main quiz logic + rendering
 ├── App.css                 # Styling for quiz card + paw + layout
@@ -90,8 +89,6 @@ src/
 ├── giphy.gif               # Paw animation image
 └── ...other assets
 ```
-```
-
 ---
 
 ##  How to Extend
