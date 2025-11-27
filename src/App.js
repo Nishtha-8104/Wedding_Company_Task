@@ -5,9 +5,9 @@ import FinalScore from "./FinalScore.jsx";
 
 const questions = [
   { text: "What sound does a cat make?", answers: ["Bhau-Bhau", "Meow-Meow", "Oink-Oink"], correct: 1 },
-  { text: "Which number is even?", answers: ["3", "5", "8"], correct: 2 },
-  { text: "Capital of France?", answers: ["Berlin", "Paris", "London"], correct: 1 },
-  { text: "Capital of France?", answers: ["Berlin", "Paris", "London"], correct: 1 },
+  { text: "What would you probably find in your fridge?", answers: ["Shoes", "Ice-cream", "Books"], correct: 1 },
+  { text: "What color are bananas?", answers: ["Yellow", "Green", "Red"], correct: 0 },
+  { text: "How many stars are in the sky?", answers: ["Two", "One Hundred", " Infinite"], correct: 2 },
 ];
 
 export default function Quiz() {
