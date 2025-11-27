@@ -90,6 +90,7 @@ src/
 ├── giphy.gif               # Paw animation image
 └── ...other assets
 ```
+```
 
 ---
 
